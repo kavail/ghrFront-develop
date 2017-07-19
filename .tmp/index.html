@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Recursos humanos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://d2ojpxxtu63wzl.cloudfront.net/static/8bde55b99b477e78d4394265761e0853_bd90ba663b7816f3127bf3c59914e31e20930eb49bcaba9aeb6a296cfc96da98" />
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../bower_components/open-sans-fontface/open-sans.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,src}) styles/app.css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css"/>
+    <!-- endbuild -->
+
+  </head>
+
+
+  <body ng-app="app">
+    <ui-view></ui-view>
+  </body>
+
+  <!-- build:js({.tmp,src}) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/component-footer/footer.js"></script>
+  <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/component-candidatos/candidatos.js"></script>
+  <script src="../bower_components/angular-native-dragdrop/draganddrop.js"></script>
+  <script src="../bower_components/component-solicitudes/solicitudes.module.js"></script>
+  <script src="../bower_components/component-caracteristicas/caracteristicas.js"></script>
+  <script src="../bower_components/component-requisitos/requisitos.js"></script>
+  <script src="../bower_components/component-varios/tecnologias.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/component-contactos/contactos.js"></script>
+  <script src="../bower_components/ngstorage/ngStorage.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <script src="index.js"></script>
+  <script src="app/techs/techs.js"></script>
+  <script src="app/techs/tech.js"></script>
+  <script src="app/title.js"></script>
+  <script src="app/main.js"></script>
+  <script src="app/header.js"></script>
+  <script src="_eslintrc.js"></script>
+  <script src="routes.js"></script>
+  <!-- endinject -->
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "component-caracteristicas",
+  "homepage": "https://github.com/SofttekFormacion2017/component-caracteristicas",
+  "description": "componente caracteristicas",
+  "main": [
+    "caracteristicas.js"
+  ],
+  "authors": [
+    "Equipo caracteristicas"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-toastr": "^2.1.1",
+    "angular-animate": "^1.6.4"
+  },
+  "_release": "bae99f4d6b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "bae99f4d6bf1f0478e120e291b53f8088fe0b064"
+  },
+  "_source": "https://github.com/SofttekFormacion2017/component-caracteristicas.git",
+  "_target": "develop",
+  "_originalSource": "https://github.com/SofttekFormacion2017/component-caracteristicas.git"
+}

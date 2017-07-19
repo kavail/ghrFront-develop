@@ -1,0 +1,33 @@
+{
+  "name": "component-requisitos",
+  "homepage": "https://github.com/SofttekFormacion2017/component-requisitos",
+  "description": "componente requisitos",
+  "main": [
+    "requisitos.js"
+  ],
+  "authors": [
+    "Equipo requisitos"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-toastr": "^2.1.1",
+    "angular-animate": "^1.6.4"
+  },
+  "_release": "213e9c1bd9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "213e9c1bd9e76f43cb3f156221620d60fb4fd9c4"
+  },
+  "_source": "https://github.com/SofttekFormacion2017/component-requisitos.git",
+  "_target": "develop",
+  "_originalSource": "https://github.com/SofttekFormacion2017/component-requisitos.git"
+}

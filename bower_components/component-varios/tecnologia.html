@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <h1 class="h1">Lista de Tecnologias</h1>
+
+<div class="row form-group ">
+        <div class="col-md-offset-6 col-sm-offset-3  col-md-5  col-sm-7 col-xs-9 ">
+                <input class="form-control" type="text" placeholder="Buscar" ng-model="buscar">
+        </div>
+        <div class="row form-group  col-md-1 col-sm-1 col-xs-2">
+          <button id="split-button" type="button" class="btn btn-primary "
+          ui-sref="app.tecnologiasDetalle({id:0, mode:'edit'})"><span class="glyphicon glyphicon-plus"></span></button>
+        </div>
+
+    </div>
+
+  <table class="table table-responsive table-striped">
+    <thead>
+      <tr  ng-init="$ctrl.orderByPropiedad=''; $ctrl.cabecera = ['id','nombre','descripcion']">
+        <th ng-repeat = "campo in $ctrl.cabecera"  ng-click="$ctrl.orderByPropiedad == campo ? $ctrl.orderReverse = !$ctrl.orderReverse : $ctrl.orderReverse = false; $ctrl.reverse = $ctrl.orderReverse  ? '-' : ''; $ctrl.orderByPropiedad=campo"> {{campo}} <span class="glyphicon" ng-class="
+          $ctrl.orderByPropiedad != campo ? 'glyphicon-sort' : ($ctrl.orderReverse ?  'glyphicon-sort-by-attributes-alt' :
+          'glyphicon-sort-by-attributes')" />
+        </th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+
+    <tr ng-repeat ="tecno in (tecnologia = ($ctrl.arrayTecnologias | filter:buscar)) |  orderBy: ($ctrl.reverse+$ctrl.orderByPropiedad) | limitTo:$ctrl.maxSize:($ctrl.currentPage-1)*$ctrl.maxSize track by tecno.id">
+      <td ng-repeat="datosTecnologia in $ctrl.cabecera ">
+        {{tecno[datosTecnologia]}}
+      </td>
+      <td class="col-md-3 col-xs-3">
+        <div class="btn-group" uib-dropdown>
+              <button id="split-button" type="button" class="btn btn-primary" ui-sref="app.tecnologiasDetalle({id: tecno.id, mode:'view'})"><span class="glyphicon glyphicon-eye-open"></span></button>
+              <button type="button" class="btn btn-primary " uib-dropdown-toggle>
+                    <span class="caret"></span>
+                    <span class="sr-only">Split button!</span>
+                </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+              <li role="menuitem"><a href="#"ui-sref="app.tecnologiasDetalle({id: tecno.id, mode:'view'})" ><span class="glyphicon glyphicon-eye-open"></span> Ver</a></li>
+              <li class="divider"></li>
+              <li role="menuitem"><a href="#"ui-sref="app.tecnologiasDetalle({id: tecno.id, mode:'edit'})" ><span class="glyphicon glyphicon-edit"></span> Editar</a></li>
+              <li role="menuitem" ><a href="#" ng-click="$ctrl.open(tecno.id,tecno.nombre)"><span class="glyphicon glyphicon-trash"></span> Borrar</a>
+              </li>
+            </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <ul uib-pagination total-items="tecnologia.length" ng-model="$ctrl.currentPage" max-size="5"class="pagination" boundary-link-numbers="true"></ul>
+  </div>
+</div>

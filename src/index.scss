@@ -1,0 +1,442 @@
+$softtek-primary: #6CAA20;
+$softtek-secondary: #002E55;
+
+#root,
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+fountain-header {
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: #5aadbb;
+    }
+  }
+}
+.glyphicon-align-justify {
+  float: right;
+}
+.tituloSolicitudAbierta{
+  background-color:#cfefa9;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.tituloSolicitudEspera{
+  background-color:#ccccff;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.tituloSolicitudCerrada{
+  background-color:#ff9999;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  flex: 1;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.header-date {
+  flex: 1;
+  text-align: right;
+  margin: 1rem;
+  white: white;
+}
+.title {
+}
+
+.titlePermanente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $softtek-primary;
+  color: white;
+}
+
+.titleOcultar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $softtek-primary;
+  color: white;
+  z-index: -1;
+}
+
+.title-h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  margin: 1rem;
+  padding-top: 10px;
+}
+
+.title-logo {
+  height: 12rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.title-h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+//////////////////////animacion del titulo inicio//////////////////////
+.animacion-titulo.ng-hide {
+  top: -174px;
+  color: $softtek-primary;
+}
+
+.animacion-titulo.ng-hide-add,
+.animacion-titulo.ng-hide-remove
+ {
+   z-index: -1px;
+  transition: all cubic-bezier(0.4, 0.0, 0.2, 1) 0.35s;
+}
+
+.elemento-ocultar {
+  position: relative;
+  top: 0px;
+}
+//////////////////////animacion del titulo fin//////////////////////
+
+.footer {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #1f1f1f;
+  text-align: center;
+  color: white;
+}
+
+.techs-container {
+  margin: 1rem;
+}
+
+.techs-h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.techs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tech {
+  height: 15rem;
+  width: 15rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.tech-logo {
+  width: 5rem;
+  height: 5rem;
+  float: right;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+.tech-h3 {
+  font-size: 1.5rem;
+  margin: 0 0 2rem;
+}
+
+//General
+
+header {
+    background-color: #ddd;
+    padding: 0 1em;
+  .logo {
+      background-color: white;
+      border-radius: 50%;
+      padding: .25em;
+      margin-right: 1em;
+    .logo-image {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .header-title {
+    display: flex;
+    margin: 0;
+
+    ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      a {
+        color: #ccc;
+        display: block;
+        padding: .8em 1.3em;
+        font-size: 1.4em;
+        font-weight: 400;
+        text-decoration: none;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        transition: all 0.2s;
+
+        .nav-text {
+            margin-left: 5px;
+            font-size: .9em;
+        }
+
+        &:hover {
+          color: lighten($softtek-primary,20);
+        }
+
+        &.toolbar-active {
+          color: $softtek-primary;
+        }
+      }
+    }
+  }
+}
+// Entidades
+
+.container-fluid {
+
+  table {
+    margin: 2em 0;
+
+    td {
+        vertical-align: middle !important;
+    }
+
+    th {
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $softtek-primary;
+        background-color: #eee;
+      }
+
+      &:nth-last-child(1) {
+        cursor: auto;
+        color: black;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+
+    li a {
+      padding: 0.5em 1.2em;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.candidatoSeleccionado,
+span.form-control {
+  border: none;
+  border-left: 3px solid $softtek-primary;
+  background-color: lighten($softtek-primary, 55);
+  border-radius: 0;
+  box-shadow: none;
+  font-style: italic;
+}
+
+.oculto {
+  visibility: hidden;
+}
+
+.glyphicon-asterisk {
+  font-size: 0.75em;
+  color: #555;
+  top: -3px;
+}
+
+.marginless-top {
+  margin-top: 0 !important;
+}
+
+.marginless-bottom {
+  margin-bottom: 0 !important;
+}
+
+.leyenda {
+  color: #888;
+  font-style: italic;
+}
+
+.sidebarCandidatos {
+  .candidatoSeleccionado {
+    border-left: 3px solid $softtek-primary;
+    background-color: lighten($softtek-primary, 55) !important;
+    font-weight: bold;
+
+    .fa-star {
+      margin-left: 0.3em;
+      margin-right: 0.6em;
+    }
+
+    .yellow-star {
+      color: #fff72a;
+    }
+  }
+
+  .pagination {
+    margin: 0 !important;
+
+    li a {
+      padding: 0.2em 0.8em;
+      font-size: 1em;
+    }
+  }
+
+  .rowCandidato {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.solicitudFiltrada {
+  border-radius: 3px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.columnaFiltrada {
+  border-right: 1px solid Gainsboro;
+}
+
+#contendorListas li {
+  list-style: none;
+}
+
+//Css DragAndDrop
+.draganddropSolicitudes {
+  .tituloSolicitudAbierta{
+    background-color: hsla(99, 100%, 70%, 0.33);
+    padding:10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -13px;
+    margin-bottom: -15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .tituloSolicitudEspera{
+    background-color: hsla(213, 100%, 70%, 0.33);
+    padding:10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -13px;
+    margin-bottom: -15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .tituloSolicitudCerrada{
+    background-color: hsla(0, 100%, 70%, 0.33);
+    padding:10px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -13px;
+    margin-bottom: -15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .drag-and-drop:hover {
+      cursor: grab;
+  }
+  .topRow{
+      margin-bottom : 30px;
+  }
+  .on-drag-hover:before {
+    display: block;
+    color: white;
+    font-size: x-large;
+    font-weight: 800;
+  }
+}
+
+//Menu fijo
+.header {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+}
+fountain-header {
+  margin-bottom: 55px;
+}
+
+.turn:hover {
+	-webkit-transition: all 700ms cubic-bezier(0.680,0,0.265,1);
+	-webkit-transition: all 700ms cubic-bezier(0.680,-0.550,0.265,1.550);
+	-moz-transition: all 700ms cubic-bezier(0.680,-0.550,0.265,1.550);
+	-o-transition: all 700ms cubic-bezier(0.680,-0.550,0.265,1.550);
+	transition: all 700ms cubic-bezier(0.680,-0.550,0.265,1.550);
+	-webkit-transition-timing-function: cubic-bezier(0.680,0,0.265,1);
+	-webkit-transition-timing-function: cubic-bezier(0.680,-0.550,0.265,1.550);
+	-moz-transition-timing-function: cubic-bezier(0.680,-0.550,0.265,1.550);
+	-o-transition-timing-function: cubic-bezier(0.680,-0.550,0.265,1.550);
+	transition-timing-function: cubic-bezier(0.680,-0.550,0.265,1.550);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}

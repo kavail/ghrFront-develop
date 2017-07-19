@@ -1,0 +1,38 @@
+<div class="container-fluid row">
+  <div class="col-md-2 col-xs-2"></div>
+  <div class="col-md-8 col-xs-8">
+  <h1 ng-if="$ctrl.mode === 'view'" style="text-align: center"> Listado de la tecnologia</h1>
+  <h1 ng-if="$ctrl.mode === 'edit'" style="text-align: center"> Formulario de la tecnologia</h1>
+    <div class="form-group">
+      <form name="$ctrl.form">
+        <div class="input_content sin-margen form-group col-md-offset-3 col-sm-6 container-fluid"
+                ng-class="{ '' : $ctrl.tecnologia.nombre ==='',
+                            'has-error' : $ctrl.form.nombre.$invalid && !$ctrl.form.nombre.$pristine,
+                            'has-success'  : $ctrl.form.nombre.$valid} ">
+                <label for="nombre">Nombre: </label>
+                <input ng-if="$ctrl.mode === 'edit'" ng-maxlength="20" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ /+/./-]{0,}" class="form-control" name="nombre" ng-model="$ctrl.tecnologia.nombre" autofocus aria-describedby="helpBlock2">
+                <span ng-if="$ctrl.mode === 'view'" class="form-control">{{$ctrl.tecnologia.nombre}}</span>
+                <span ng-class="!$ctrl.form.nombre.$error.pattern ? 'oculto' : ''" class="help-block">Sólo puede incluir letras</span>
+                <span ng-class="!$ctrl.form.nombre.$error.maxlength ? 'oculto' : ''" class="help-block">máximo 20 caracteres</span>
+          </div>
+            <div class="input_content sin-margen form-group col-md-offset-3 col-sm-6 container-fluid"
+                ng-class="{ 'has-error' : $ctrl.form.descripcion.$invalid && !$ctrl.form.descripcion.$pristine,
+                            'has-success'  : $ctrl.form.descripcion.$valid} ">
+                <label for="descripcion">Descripcion: </label>
+                <input required ng-maxlength="50" class="form-control" name="descripcion" ng-if="$ctrl.mode === 'edit'" ng-model="$ctrl.tecnologia.descripcion" autofocus aria-describedby="helpBlock2"></input>
+                <span ng-if="$ctrl.mode === 'view'" class="form-control">{{$ctrl.tecnologia.descripcion}}</span>
+                <span ng-class="!$ctrl.form.descripcion.$error.maxlength ? 'oculto' : ''" class="help-block">máximo 50 caracteres</span>
+
+            </div>
+            <div class="input_content sin-margen form-group col-md-offset-5 col-sm-6 container-fluid">
+        <button ng-if="$ctrl.mode === 'edit'"type="button" class="btn btn-primary" ng-click="$ctrl.update($ctrl.tecnologia,$ctrl.$ctrl.form)"  ng-disabled="$ctrl.form.$invalid">Guardar</button>
+        <button class="btn btn-primary"ng-if="$ctrl.mode === 'view'" type="submit" ng-click="$ctrl.edit()">Editar</button>
+        <button ng-if="$ctrl.mode === 'view'" class="btn btn-default" ui-sref="app.tecnologias" ui-sref-active="toolbar-active">Volver al listado</button>
+        <button ng-if="$ctrl.mode === 'edit'"type="button" ng-click="$ctrl.reset($ctrl.form)" class="btn btn-default" >Reiniciar</button>
+        <button class="btn btn-default"ng-if="$ctrl.mode === 'edit'" type="submit" ng-click="$ctrl.noEdit()">Cancelar Edicion</button>
+          </div>
+      </form>
+    </div>
+  </div>
+    <div class="col-md-2 col-xs-2"></div>
+</div>
