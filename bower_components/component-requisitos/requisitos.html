@@ -1,6 +1,6 @@
 <div class="row" ng-init="vm.modos===''">
 <div class="col-md-12">
-<h3>Requisitos</h3>
+<h3>Pedido</h3>
 <div class="formulario requisitos-list" ng-repeat="requisito in $ctrl.requisitos track by $index">
   <div ng-if="$ctrl.mode ==='edit'" class="row">
     <div class="form-group col-md-6 col-sm-6 col-xs-8" ng-class="{ 'has-error' : formRequisitos.nombre.$invalid && !formRequisitos.nombre.$pristine, 'has-success': !formRequisitos.nombre.$focused && formRequisitos.nombre.$valid}">

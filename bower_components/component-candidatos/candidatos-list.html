@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1 class="h1">Lista de candidatos</h1>
+    <h1 class="h1">Lista de clientes</h1>
 
     <div class="row form-group">
         <div class="col-sm-offset-6 col-sm-5 col-xs-10">
@@ -15,7 +15,7 @@
 
     <table class="table table-responsive table-striped">
         <thead class="thead-inverse">
-            <tr ng-init="$ctrl.orderByPropiedad=''; $ctrl.cabeceras=['id','nombre','provincia', 'perfil','expect_contractual']">
+            <tr ng-init="$ctrl.orderByPropiedad=''; $ctrl.cabeceras=['id','nombre','provincia', 'local','expect_contractual']">
                 <th ng-repeat="cabecera in $ctrl.cabeceras" ng-class="$last ? 'hidden-xs' : ''" ng-click="$ctrl.orderByPropiedad == cabecera ? $ctrl.orderReverse = !$ctrl.orderReverse : $ctrl.orderReverse = false; $ctrl.reverse=$ctrl.orderReverse ? '-':''; $ctrl.orderByPropiedad=cabecera">
                     <span>{{cabecera.split('_').join(' ')}}</span>
                     <span class="glyphicon" ng-class="$ctrl.orderByPropiedad != cabecera ? 'glyphicon-sort' : ($ctrl.orderReverse ? 'glyphicon-sort-by-attributes-alt' : 'glyphicon-sort-by-attributes')"></span>

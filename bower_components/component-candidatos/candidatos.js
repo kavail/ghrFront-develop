@@ -71,10 +71,10 @@ angular.module('ghr.candidatos', ['toastr', 'ghr.contactos'])
               candidatoFactory.update(candidato.id, candidatoModificado).then(
                 function onSuccess(response) {
                   vm.setOriginal(response);
-                  toastr.success('El candidato se ha actualizado correctamente.');
+                  toastr.success('El cliente se ha actualizado correctamente.');
                 },
                 function onFailure() {
-                  toastr.error('No se ha podido realizar la operacion, por favor compruebe su conexion a internet e intentelo más tarde.');
+                  toastr.error('No se ha podido realizar la operación, por favor compruebe su conexión a Internet e inténtelo más tarde.');
                 }
               );
             }
@@ -121,7 +121,7 @@ angular.module('ghr.candidatos', ['toastr', 'ghr.contactos'])
                 });
               };
               vm.crearContacto(vm.contactoNuevo);
-              toastr.success('El contacto se ha creado correctamente');
+              toastr.success('El cliente se ha creado correctamente');
               $state.go($state.current, {
                 id: $stateParams.id,
                 mode: 'view'
@@ -182,17 +182,17 @@ angular.module('ghr.candidatos', ['toastr', 'ghr.contactos'])
                       contactosFactory.create(contactoNuevo);
                     };
                     vm.crearContacto(vm.contactoNuevo);
-                    toastr.success('El contacto se ha creado correctamente');
+                    toastr.success('El cliente se ha creado correctamente');
                   }
                   $state.go($state.current, {
                     id: response.id,
                     mode: 'view'
                   });
 
-                  toastr.success('Candidato creado correctamente');
+                  toastr.success('Cliente creado correctamente');
                 },
                 function onFailure() {
-                  toastr.error('No se ha podido realizar la operacion, por favor compruebe su conexion a internet e intentelo más tarde.');
+                  toastr.error('No se ha podido realizar la operación, por favor compruebe su conexión a Internet e inténtelo más tarde.');
                 }
               );
             });
@@ -232,17 +232,20 @@ angular.module('ghr.candidatos', ['toastr', 'ghr.contactos'])
         vm.opcionesDesplegable = [{
           disp_viajar: 'I',
           disp_residencia: 'I',
-          estado: 'En Proceso'
+          //estado: 'En Proceso'
+          estado: 'En cocina'
         },
         {
           disp_viajar: 'S',
           disp_residencia: 'S',
-          estado: 'Descartado'
+          //estado: 'Descartado'
+          estado: 'En camino'
         },
         {
           disp_viajar: 'N',
           disp_residencia: 'N',
-          estado: 'Incorporación'
+          //estado: 'Incorporación'
+          estado: 'Pagado'
         }
         ];
         vm.selectEstado = vm.opcionesDesplegable[0];

@@ -52,6 +52,7 @@ angular.module('ghr.contactos', ['toastr']) // Creamos este modulo para la entid
       }
 
       vm.desplegar = function () {
+        /*
         vm.opcionesDesplegable = [{
           tipo: 'Teléfono',
           icon: 'phone'
@@ -72,7 +73,20 @@ angular.module('ghr.contactos', ['toastr']) // Creamos este modulo para la entid
           tipo: 'Twitter',
           icon: 'twitter'
         }
-        ];
+      ];*/
+      vm.opcionesDesplegable = [{
+        tipo: 'Teléfono Fijo',
+        icon: 'phone'
+      },
+      {
+        tipo: 'Teléfono Móvil',
+        icon: 'mobile'
+      },
+      {
+        tipo: 'Correo',
+        icon: 'envelope'
+      }
+    ];
         vm.selectTipo = vm.opcionesDesplegable[0];
       };
       vm.desplegar();
@@ -83,7 +97,7 @@ angular.module('ghr.contactos', ['toastr']) // Creamos este modulo para la entid
        * @return {[type]}      [description]
        */
       vm.mostrarIconoContacto = function (tipo) {
-        if (tipo == 'Teléfono') {
+        /*if (tipo == 'Teléfono') {
           return 'phone';
         } else if (tipo == 'Correo') {
           return 'envelope';
@@ -93,7 +107,14 @@ angular.module('ghr.contactos', ['toastr']) // Creamos este modulo para la entid
           return 'linkedin';
         } else if (tipo == 'Twitter') {
           return 'twitter';
-        }
+        }*/
+        if (tipo == 'Teléfono Fijo') {
+          return 'phone';
+        } else if (tipo == 'Correo') {
+          return 'envelope';
+        } else if (tipo == 'Teléfono Móvil') {
+          return 'mobile';
+        } 
       };
     }
   })

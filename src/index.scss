@@ -1,5 +1,5 @@
-$softtek-primary: #6CAA20;
-$softtek-secondary: #002E55;
+$peperonizza-primary: #b30000;
+$peperonizza-secondary: #002E55;
 
 #root,
 body,
@@ -94,7 +94,7 @@ fountain-header {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: $softtek-primary;
+  background-color: $peperonizza-primary;
   color: white;
 }
 
@@ -103,16 +103,25 @@ fountain-header {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: $softtek-primary;
+  background-color: $peperonizza-primary;
   color: white;
   z-index: -1;
 }
 
 .title-h1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 7rem;
   margin: 1rem;
   padding-top: 10px;
+  font-family: 'Fjalla One';
+  text-shadow: 2px 1px 0px $peperonizza-primary, 3px 1px 0px #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.title-h1:before {
+  content:url(app/pizza3.png);
+  margin-right: 10px;
 }
 
 .title-logo {
@@ -131,7 +140,7 @@ fountain-header {
 //////////////////////animacion del titulo inicio//////////////////////
 .animacion-titulo.ng-hide {
   top: -174px;
-  color: $softtek-primary;
+  color: $peperonizza-primary;
 }
 
 .animacion-titulo.ng-hide-add,
@@ -192,6 +201,10 @@ fountain-header {
   margin: 0 0 2rem;
 }
 
+.estado-h3 {
+  text-align: center;
+}
+
 //General
 
 header {
@@ -200,7 +213,7 @@ header {
   .logo {
       background-color: white;
       border-radius: 50%;
-      padding: .25em;
+      padding: 0;
       margin-right: 1em;
     .logo-image {
       width: 32px;
@@ -215,7 +228,7 @@ header {
     ul {
       display: flex;
       padding: 0;
-      margin: 0;
+      margin: auto;
       list-style: none;
 
       a {
@@ -235,11 +248,11 @@ header {
         }
 
         &:hover {
-          color: lighten($softtek-primary,20);
+          color: lighten($peperonizza-primary,20);
         }
 
         &.toolbar-active {
-          color: $softtek-primary;
+          color: $peperonizza-primary;
         }
       }
     }
@@ -262,7 +275,7 @@ header {
       transition: all 0.2s;
 
       &:hover {
-        color: $softtek-primary;
+        color: $peperonizza-primary;
         background-color: #eee;
       }
 
@@ -288,8 +301,8 @@ header {
 .candidatoSeleccionado,
 span.form-control {
   border: none;
-  border-left: 3px solid $softtek-primary;
-  background-color: lighten($softtek-primary, 55);
+  border-left: 3px solid $peperonizza-primary;
+  background-color: lighten($peperonizza-primary, 55);
   border-radius: 0;
   box-shadow: none;
   font-style: italic;
@@ -320,8 +333,8 @@ span.form-control {
 
 .sidebarCandidatos {
   .candidatoSeleccionado {
-    border-left: 3px solid $softtek-primary;
-    background-color: lighten($softtek-primary, 55) !important;
+    border-left: 3px solid $peperonizza-primary;
+    background-color: lighten($peperonizza-primary, 55) !important;
     font-weight: bold;
 
     .fa-star {
@@ -352,6 +365,7 @@ span.form-control {
 .solicitudFiltrada {
   border-radius: 3px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  margin:auto;
 }
 
 .columnaFiltrada {
@@ -361,10 +375,137 @@ span.form-control {
 #contendorListas li {
   list-style: none;
 }
+/* ------- MODIFICADO POR LAURA ------ */
+//cosas de bootstrap que no se estaban viendo
+.h-detail {
+  margin-top:40px !important;
+}
+.col-lg-offset-1 {
+  margin-left:8.33333333% !important;
+}
+
+.col-lg-offset-2 {
+  margin-left: 16.66666667% !important;
+}
+
+/* ------- SOLICITUDES POST-IT --------*/
+li {
+  display: block;
+}
+.post-it {
+  margin:auto;
+  margin:20px;
+  border-radius: 25px;
+  border-top: none;
+  padding-right:0 !important;
+}
+.post-it h4 {
+  padding:15px;
+  margin:0;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  font-family: 'Impact';
+  font-size: 1.6em;
+}
+.post-it h4 a {
+  color: #fff;
+}
+.post-it h4 a::before{
+  content:'#';
+}
+.post-it h5{
+  font-weight: bold;
+  border-bottom:1px solid #e8e8e8;
+  margin-left:15px;
+  margin-right: 15px;
+  margin-top:15px;
+}
+.post-it h5 a {
+  font-weight: normal;
+
+}
+
+.tituloSolicitudAbierta{
+  background-color: #e9e9e9;
+  border:3px solid #e9e9e9;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+}
+
+#abierta .post-it {
+  border: 3px solid #e9e9e9;
+}
+
+#abierta .post-it h4 a {
+  color: $peperonizza-primary;
+}
+
+.tituloSolicitudEspera{
+  background-color: $peperonizza-primary;
+  border:3px solid $peperonizza-primary;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#espera .post-it {
+  border:3px solid $peperonizza-primary;
+}
+
+.tituloSolicitudCerrada{
+  background-color: #303030;
+  border:3px solid #303030;
+  padding:10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -13px;
+  margin-bottom: -15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#cerrada .post-it {
+  border:3px solid #303030;
+}
+
+h5.repartidor:before {
+  content: url(app/repartidor.png);
+}
+
+//TABLA LISTAS
+thead {
+  border-bottom:5px solid $peperonizza-primary;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: #ffe5e5;
+}
+
+hr {
+  margin:0 !important;
+}
+/* ----- FORMULARIOS ------ */
+.formulario-et {
+  color: $peperonizza-primary;
+}
+.formulario-et input, .formulario-et span {
+  background: $peperonizza-primary;
+  color:#fff;
+  font-weight: bold;
+}
+/* ------- FIN MODIFICACIÓN LAURA -------- */
 
 //Css DragAndDrop
 .draganddropSolicitudes {
-  .tituloSolicitudAbierta{
+  /*.tituloSolicitudAbierta{
     background-color: hsla(99, 100%, 70%, 0.33);
     padding:10px;
     margin-left: -15px;
@@ -395,7 +536,7 @@ span.form-control {
     margin-bottom: -15px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-  }
+  }*/
   .drag-and-drop:hover {
       cursor: grab;
   }

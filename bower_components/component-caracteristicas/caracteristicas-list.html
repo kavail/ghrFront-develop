@@ -11,8 +11,10 @@
             <button ui-sref="app.caracteristicasDetalle({id: 0,mode: 'edit'})" type="button" class="btn btn-primary">Nuevo <span class="glyphicon glyphicon-plus"></span></button>
         </div>
     </div>
+    <div class="row">
 
-    <table class="table table-responsive table-striped">
+
+    <table class="col-md-10 tabla-lista table table-responsive table-striped">
         <thead>
             <tr ng-init="$ctrl.orderByPropiedad=''; $ctrl.cabecera = ['nombre','tipo','id']">
                 <th ng-repeat="campo in $ctrl.cabecera" ng-click="$ctrl.orderByPropiedad == campo ? $ctrl.orderReverse = !$ctrl.orderReverse : $ctrl.orderReverse = false; $ctrl.reverse = $ctrl.orderReverse  ? '-' : ''; $ctrl.orderByPropiedad=campo">
@@ -45,6 +47,7 @@
             </td>
         </tr>
     </table>
+    </div>
     <div>
         <ul uib-pagination total-items="caracteristicas.length" ng-model="$ctrl.currentPage" max-size="$ctrl.maxSize" class="pagination" boundary-link-numbers="true"></ul>
     </div>

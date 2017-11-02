@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <h3>Contactos</h3>
+    <h3>Contacto</h3>
     <div class="formulario contactos-list" ng-repeat="contacto in $ctrl.arrayContactos">
       <div class="row" ng-if="$ctrl.mode === 'edit'">
         <div class="form-group col-md-3 col-sm-2 col-xs-2">
@@ -38,7 +38,6 @@
 
     <div class="row" ng-if="$ctrl.mode === 'edit'">
       <div class="form-group col-md-3 col-sm-2 col-xs-2">
-
         <div ng-if="$ctrl.mode ==='edit' && $ctrl.modos === 'aparece'" class="btn-group" uib-dropdown>
           <button type="button" class="btn btn-default" uib-dropdown-toggle>
                 <span class="fa fa-{{$ctrl.mostrarIconoContacto($ctrl.contacto.tipo)}}"></span>
